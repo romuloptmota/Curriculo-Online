@@ -44,6 +44,6 @@ class Experiencias(Base):
     descricao = models.TextField('Descrição', max_length=500)
 
 
-class Habilidades(Base):
+class Habilidade(Base):
     area = models.CharField('Area', max_length=100)
     descricao = models.TextField('Descrição', max_length=500)

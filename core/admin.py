@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Inicio, Formacao, Conhecimento, Cursos, Experiencias, Habilidades
+from .models import Inicio, Formacao, Conhecimento, Cursos, Experiencias, Habilidade
 
 
 @admin.register(Inicio)
@@ -29,7 +29,7 @@ class ExperienciasAdmin(admin.ModelAdmin):
     list_display = ('cargo', 'periodo', 'descricao')
 
 
-@admin.register(Habilidades)
+@admin.register(Habilidade)
 class HabilidadesAdmin(admin.ModelAdmin):
     list_display = ('area', 'descricao')
 
