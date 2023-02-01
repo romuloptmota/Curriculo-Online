@@ -11,36 +11,20 @@
                     <div class="col-sm-6 col-md-6 col-lg-6">
                       <div class="block">
                         <div class="block-title">
-                          <h3>Educação</h3>
+                          <h3>Formação Acadêmica</h3>
                         </div>
 
                         <div class="timeline">
-                          <!-- Education 1 -->
+                        {% for f in formacao %}
+                          <!-- Formação 1 -->
                           <div class="timeline-item">
-                            <h4 class="item-title">Specialization Course</h4>
-                            <span class="item-period">2010</span>
-                            <span class="item-small">Apple Inc.</span>
-                            <p class="item-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+                            <h4 class="item-title">{{ f.curso }}</h4>
+                            <span class="item-period">{{ f.ano_conclusao }}</span>
+                            <span class="item-small">{{ f.instituicao }}</span>
                           </div>
-                          <!-- / Education 1 -->
+                          <!-- / Formação 1 -->
+                        {% endfor %}
 
-                          <!-- Education 2 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Specialization Course</h4>
-                            <span class="item-period">2010</span>
-                            <span class="item-small">Apple Inc.</span>
-                            <p class="item-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                          </div>
-                          <!-- / Education 2 -->
-
-                          <!-- Education 3 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Specialization Course</h4>
-                            <span class="item-period">2010</span>
-                            <span class="item-small">Apple Inc.</span>
-                            <p class="item-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                          </div>
-                          <!-- / Education 3 -->
                         </div>
                       </div>
                     </div>
@@ -48,36 +32,17 @@
                     <div class="col-sm-6 col-md-6 col-lg-6">
                       <div class="block">
                         <div class="block-title">
-                          <h3>Experiência Profissional</h3>
+                          <h3>Cursos Complementares</h3>
                         </div>
 
                         <div class="timeline">
+                          {% for c in cursos %}
                           <!-- Experience 1 -->
                           <div class="timeline-item">
-                            <h4 class="item-title">Frontend-developer</h4>
-                            <span class="item-period">Dec 2012 - Current</span>
-                            <span class="item-small">Web Agency</span>
-                            <p class="item-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+                            <h4 class="item-title">{{ c.curso }}</h4>
                           </div>
                           <!-- / Experience 1 -->
-
-                          <!-- Experience 2 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Web Designer</h4>
-                            <span class="item-period">Dec 2011 - Nov 2012</span>
-                            <span class="item-small">Apple Inc.</span>
-                            <p class="item-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                          </div>
-                          <!-- / Experience 2 -->
-
-                          <!-- Experience 3 -->
-                          <div class="timeline-item">
-                            <h4 class="item-title">Graphic Designer</h4>
-                            <span class="item-period">Jan 2010 - Dec 2011</span>
-                            <span class="item-small">Apple Inc.</span>
-                            <p class="item-description">Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                          </div>
-                          <!-- / Experience 3 -->
+                          {% endfor %}
                         </div>
                       </div>
                     </div>
@@ -87,24 +52,17 @@
                     <div class="col-sm-6 col-md-6 col-lg-6">
                       <div class="block">
                         <div class="block-title">
-                          <h3>Design <span>Skills</span></h3>
+                          <h3>Conhecimento e Noções</h3>
                         </div>
 
-                        <div class="skills-info">
-                          <h4>Web Design</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-1"></div>
-                          </div>
-
-                          <h4>Graphic Design</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-2"></div>
-                          </div>
-
-                          <h4>Print Design</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-3"></div>
-                          </div>
+                        <div class="timeline">
+                          {% for n in conhecimento %}
+                        <!-- Conhecimento e noções 1 -->
+                           <div class="timeline-item">
+                              <h4 class="item-title">{{ n.nocoes }}</h4>
+                            </div>
+                        <!-- / Conhecimento e noções 1 -->
+                          {% endfor %}
                         </div>
 
                       </div>
@@ -113,25 +71,22 @@
                     <div class="col-sm-6 col-md-6 col-lg-6">
                       <div class="block">
                         <div class="block-title">
-                          <h3>Coding <span>Skills</span></h3>
+                          <h3>Experiência Profissional</span></h3>
                         </div>
 
-                        <div class="skills-info">
-                          <h4>HTML5</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-4"></div>
-                          </div>
-
-                          <h4>CSS3/LESS/SASS</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-5"></div>
-                          </div>
-
-                          <h4>jQuery</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-6"></div>
-                          </div>
+                        <div class="timeline">
+                        {% for e in experiencias %}
+                        <!-- Experiencia profissional 1 -->
+                           <div class="timeline-item">
+                              <h4 class="item-title">{{ e.cargo }}</h4>
+                              <span class="item-period">{{ e.periodo }}</span>
+                              <span class="item-small">{{ e.empresa }}</span>
+                              <p class="item-description">{{ e.descricao }}</p>
+                            </div>
+                        <!-- / Experienca profissional 1 -->
+                        {% endfor %}
                         </div>
+
 
                       </div>
                     </div>
@@ -142,7 +97,7 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                       <div class="block">
                         <div class="center download-resume">
-                          <a href="{% static 'cv/resume.pdf' %}" class="btn btn-secondary" target="_blank">Download Currículo</a>
+                          <a href="{% static 'cv/romuloptmota.pdf' %}" class="btn btn-secondary" target="_blank">Download Currículo</a>
                         </div>
                       </div>
                     </div>
