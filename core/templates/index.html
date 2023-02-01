@@ -1,12 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-    <h1>Index</h1>
+{% block content %}
 
-</body>
-</html>
+  <!-- Navigation -->
+  {% include 'barra_navegacao.html' %}
+  <!-- Navigation -->
+
+  <!-- Home Subpage -->
+  {% include 'inicio.html' %}
+  <!-- End of Home Subpage -->
+
+  <!-- Resume Subpage -->
+  {% include 'curriculo.html' %}
+  <!-- End of Resume Subpage -->
+
+  <!-- Services Subpage -->
+  {% include 'habilidades.html' %}
+  <!-- End of Services Subpage -->
+
+  <!-- Portfolio Subpage -->
+  {% include 'portifolio.html' %}
+
+{% endblock %}
