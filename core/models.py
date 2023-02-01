@@ -22,5 +22,23 @@ class Inicio(Base):
     email = models.CharField('E-mail', max_length=100)
     telefone = models.CharField('Telefone', max_length=100)
 
-    def __str__(self):
-        return self.nome
+
+class Formacao(Base):
+    curso = models.CharField('Curso', max_length=100)
+    ano_conclusao = models.CharField('Ano de Conclusão', max_length=100)
+    instituicao = models.CharField('Instituição', max_length=100)
+
+
+class Conhecimento(Base):
+    nocoes = models.CharField('Conhecimento', max_length=100)
+
+
+class Cursos(Base):
+    curso = models.CharField('Curso', max_length=100)
+
+
+class Experiencias(Base):
+    cargo = models.CharField('Cargo', max_length=100)
+    periodo = models.CharField('Periodo', max_length=100)
+    empresa = models.CharField('Empresa', max_length=100)
+    descricao = models.TextField('Descrição', max_length=500)
