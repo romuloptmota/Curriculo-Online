@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView
-from .models import Inicio, Formacao, Conhecimento, Cursos, Experiencias
+from .models import Inicio, Formacao, Conhecimento, Cursos, Experiencias, Habilidades
 
 
 class IndexView(TemplateView):
@@ -13,5 +13,6 @@ class IndexView(TemplateView):
         context['conhecimento'] = Conhecimento.objects.all().order_by('id')
         context['cursos'] = Cursos.objects.all().order_by('id')
         context['experiencias'] = Experiencias.objects.all().order_by('id')
+        context['habilidades'] = Habilidades.objects.all().order_by('?')
 
         return context
