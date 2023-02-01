@@ -1,5 +1,7 @@
 {% load static %}
 
+          {% for i in inicio %}
+
             <section class="pt-page" data-id="home">
               <div class="section-inner start-page-content">
                 <div class="page-header">
@@ -12,21 +14,21 @@
 
                     <div class="col-sm-8 col-md-8 col-lg-8">
                       <div class="title-block">
-                        <h1>Felicity Jones</h1>
+                        <h1>{{ i.nome }}</h1>
                         <div class="owl-carousel text-rotation">
                           <div class="item">
-                            <div class="sp-subtitle">Web Designer</div>
+                            <div class="sp-subtitle">{{ i.profissao1 }}</div>
                           </div>
                           <div class="item">
-                            <div class="sp-subtitle">Frontend-developer</div>
+                            <div class="sp-subtitle">{{ i.profissao2 }}</div>
                           </div>
                         </div>
                       </div>
 
                       <div class="social-links">
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="{{ i.github }}" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i></a>
+                        <a href="{{ i.linkedin }}" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="{{ i.facebook }}" target="_blank" rel="noreferrer"><i class="fa-brands fa-facebook"></i></a>
                       </div>
                     </div>
                   </div>
@@ -40,8 +42,7 @@
                         <div class="block-title">
                           <h3>Quem <span>Sou?</span></h3>
                         </div>
-                        <p>Olá! Eu sou a Felicity Jones. Gosto de gatos, video games e programação. Aqui você irá encontrar algumas outras
-                        informações sobre mim.</p>
+                        <p>{{ i.descricao }}</p>
                       </div>
                       <div class="download-resume">
                         <a href="{% static 'cv/romuloptmota.pdf' %}" class="btn btn-secondary" target="_blank">Download Currículo</a>
@@ -50,12 +51,10 @@
 
                     <div class="col-sm-6 col-md-6 col-lg-6">
                       <ul class="info-list">
-                        <li><span class="title">Idade</span><span class="value">29</span></li>
-                        <li><span class="title">Nacionalidade</span><span class="value">Brasil</span></li>
-                        <li><span class="title">Cidade/Estado</span><span class="value">São Paulo, SP</span></li>
-                        <li><span class="title">E-mail</span><span class="value">felicity@geekuniversity.com.br</span></li>
-                        <li><span class="title">Fone</span><span class="value">+5511 123 456 789</span></li>
-                        <li><span class="title">Freelance</span><span class="value available">Disponível</span></li>
+                        <li><span class="title">Nacionalidade</span><span class="value">{{ i.nacionalidade }}</span></li>
+                        <li><span class="title">Cidade/Estado</span><span class="value">{{ i.cidade_estado }}</span></li>
+                        <li><span class="title">E-mail</span><span class="value">{{ i.email }}</span></li>
+                        <li><span class="title">Fone</span><span class="value">{{ i.telefone }}</span></li>
                       </ul>
                     </div>
 
@@ -63,3 +62,5 @@
                 </div>
               </div>
             </section>
+
+          {% endfor %}
