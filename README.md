@@ -22,5 +22,5 @@ Obs. Por limitações do heroku basico, não foi possivel
 crial nos models a função de upload de imagem, assim as mantendo 
  estaticas.
 
-### Projeto Publicado
+### Projeto Publicado - Desativado de modo temporario
 https://curriculo-rptm.herokuapp.com/
